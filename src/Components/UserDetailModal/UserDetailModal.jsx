@@ -37,13 +37,13 @@ const UserDetailModal = ({ isOpen, onClose, user }) => {
             </ul>
           </div>
         )}
-        <p>
+        {/* <p>
           <strong>Shareable Link:</strong> {user.shareableLink}
-        </p>
+        </p> */}
         {user.profileimg && (
           <div>
             <strong>Profile Image:</strong>
-            <img src={user.profileimg} alt="Profile" style={{ width: "100px", height: "100px" }} />
+            <img src={`https://tapmize.onrender.com/${user.profileimg}`} alt="Profile" style={{ width: "100px", height: "100px" }} />
           </div>
         )}
       </div>
