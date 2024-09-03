@@ -46,7 +46,7 @@
     margin: 10px 0;
   }
   
-  .tableContainer {
+  .table-container {
     max-width: 100%;
     overflow-x: auto;
     padding: 16px;
@@ -78,12 +78,12 @@
     text-transform: uppercase;
   }
   
-  .evenRow {
+  .even-row {
     background-color: #ffffff; /* White background for even rows */
     color: #000000; /* Black text for even rows */
   }
   
-  .oddRow {
+  .odd-row {
     background-color: #007acc; /* Light blue background for odd rows */
     color: #ffffff; /* White text for odd rows */
   }

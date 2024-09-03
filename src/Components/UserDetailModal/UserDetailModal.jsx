@@ -25,7 +25,7 @@ const UserDetailModal = ({ isOpen, onClose, user }) => {
         <p>
           <strong>About:</strong> {user.aboutus}
         </p>
-        <div className={styles.tableContainer}>
+        <div className="table-container">
           <table>
             <thead>
               <tr>
@@ -40,7 +40,7 @@ const UserDetailModal = ({ isOpen, onClose, user }) => {
                 user.otherLinks.map((link, index) => (
                   <tr
                     key={index}
-                    className={index % 2 === 0 ? styles.evenRow : styles.oddRow}
+                    className={index % 2 === 0 ? "even-row" : "odd-row"}
                   >
                     <td>{link.icon}</td>
                     <td>{link.title}</td>
