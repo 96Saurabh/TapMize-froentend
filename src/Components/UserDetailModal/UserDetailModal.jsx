@@ -25,25 +25,43 @@ const UserDetailModal = ({ isOpen, onClose, user }) => {
         <p>
           <strong>About:</strong> {user.aboutus}
         </p>
-        {user.otherLinks && user.otherLinks.length > 0 && (
-          <div>
-            <strong>Other Links:</strong>
-            <ul>
-              {user.otherLinks.map((link, index) => (
-                <li key={index}>
-                  <strong>{link.title}</strong> - {link.urlLink}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div className={styles.tableContainer}>
+          <table>
+            <thead>
+              <tr>
+                <th>Icon</th>
+                <th>Title</th>
+                <th>URL</th>
+              </tr>
+            </thead>
+            <tbody>
+              {user.otherLinks &&
+                user.otherLinks.length > 0 &&
+                user.otherLinks.map((link, index) => (
+                  <tr
+                    key={index}
+                    className={index % 2 === 0 ? styles.evenRow : styles.oddRow}
+                  >
+                    <td>{link.icon}</td>
+                    <td>{link.title}</td>
+                    <td>{link.urlLink}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+
         {/* <p>
           <strong>Shareable Link:</strong> {user.shareableLink}
         </p> */}
         {user.profileimg && (
           <div>
             <strong>Profile Image:</strong>
-            <img src={`https://tapmize.onrender.com/${user.profileimg}`} alt="Profile" style={{ width: "100px", height: "100px" }} />
+            <img
+              src={`https://tapmize.onrender.com/${user.profileimg}`}
+              alt="Profile"
+              style={{ width: "100px", height: "100px" }}
+            />
           </div>
         )}
       </div>
