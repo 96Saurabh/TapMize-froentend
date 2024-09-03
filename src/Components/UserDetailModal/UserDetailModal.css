@@ -17,7 +17,7 @@
     background: white;
     border-radius: 8px;
     padding: 20px;
-    width: 800px; /* Adjust width as needed */
+    width: 1000px; /* Adjust width as needed */
     max-height: 80vh; /* Prevent the modal from being too tall */
     overflow-y: auto; /* Enable scroll if content is too long */
     position: relative;
