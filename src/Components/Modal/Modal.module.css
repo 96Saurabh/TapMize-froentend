@@ -142,7 +142,8 @@
   }
   
   thead {
-    background-color: #333; /* Dark header background */
+    border-radius: 8px;
+    background-color: #515151; /* Dark header background */
     color: #fff; /* White text for contrast */
   }
   
