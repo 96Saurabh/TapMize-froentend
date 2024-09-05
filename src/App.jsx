@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/admin" element={<Adminpage/>} />
+        <Route path="/" element={<Adminpage/>} />
         <Route path="/profile/:userId" element={<ProfilePage />} />
         
 
