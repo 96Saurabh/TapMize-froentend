@@ -45,7 +45,7 @@ const MainContent = () => {
 
   const copyUserLinkToClipboard = (userId) => {
     
-    const userLink = `${userId}`
+    const userLink = `https://tap-mize.vercel.app/profile/${userId}`
     // const userLink = `${window.location.origin}/profile/${userId}`
     navigator.clipboard.writeText(userLink)
       .then(() => {
