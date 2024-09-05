@@ -82,7 +82,7 @@ const Modal = ({ isOpen, onClose }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/profile/save-user",
+        "tapmize.onrender.com/api/v1/profile/save-user",
         data,
         {
           headers: {
