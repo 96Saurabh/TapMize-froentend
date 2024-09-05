@@ -25,6 +25,7 @@ const MainContent = () => {
 
   const fetchUserById = async (id) => {
     try {
+      // Use the correct backend URL to fetch the user details by ID
       const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const data = await response.json();
       setSelectedUser(data);
@@ -44,7 +45,7 @@ const MainContent = () => {
   };
 
   const copyUserLinkToClipboard = (userId) => {
-    
+    // Correct sharable link using the frontend base URL
     const userLink = `https://tap-mize.vercel.app/profile/${userId}`;
     navigator.clipboard.writeText(userLink)
       .then(() => {
