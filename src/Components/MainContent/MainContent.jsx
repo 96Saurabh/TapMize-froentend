@@ -44,7 +44,8 @@ const MainContent = () => {
   };
 
   const copyUserLinkToClipboard = (userId) => {
-    const userLink = `https://tap-mize.vercel.app/profile/${userId}`;
+    // https://tapmize.onrender.com/api/v1/profile/66d9d0482cc5a53afbeec5a5
+    const userLink = `https://tapmize.onrender.com/api/v1/profile/${userId}`;
     navigator.clipboard.writeText(userLink)
       .then(() => {
         alert("User link copied to clipboard!");
