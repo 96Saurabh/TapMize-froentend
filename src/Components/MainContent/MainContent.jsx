@@ -44,12 +44,14 @@ const MainContent = () => {
   };
 
   const copyUserLinkToClipboard = (userId) => {
-    const userLink = `${window.location.origin}/profile/${userId}`;
-    navigator.clipboard.writeText(userLink).then(() => {
-      alert("User link copied to clipboard!");
-    }).catch((error) => {
-      console.error("Error copying user link:", error);
-    });
+    const userLink = `https://tap-mize.vercel.app/profile/${userId}`;
+    navigator.clipboard.writeText(userLink)
+      .then(() => {
+        alert("User link copied to clipboard!");
+      })
+      .catch((error) => {
+        console.error("Error copying user link:", error);
+      });
   };
 
   return (
