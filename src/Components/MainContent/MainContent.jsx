@@ -15,7 +15,7 @@ const MainContent = () => {
 
   const fetchAllUsers = async () => {
     try {
-      const response = await fetch("tapmize.onrender.com/api/v1/profile/profile");
+      const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/profile`);
       const data = await response.json();
       setUsers(data.data);
     } catch (error) {
@@ -25,7 +25,7 @@ const MainContent = () => {
 
   const fetchUserById = async (id) => {
     try {
-      const response = await fetch(`tapmize.onrender.com/api/v1/profile/${id}`);
+      const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const data = await response.json();
       setSelectedUser(data);
       setUserDetailModalOpen(true);
