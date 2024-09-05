@@ -45,7 +45,8 @@ const MainContent = () => {
 
   const copyUserLinkToClipboard = (userId) => {
     
-    const userLink = `${window.location.origin}/profile/${userId}`
+    const userLink = `${userId}`
+    // const userLink = `${window.location.origin}/profile/${userId}`
     navigator.clipboard.writeText(userLink)
       .then(() => {
         alert("User link copied to clipboard!");
