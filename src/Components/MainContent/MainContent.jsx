@@ -44,8 +44,8 @@ const MainContent = () => {
   };
 
   const copyUserLinkToClipboard = (userId) => {
-    // Correct sharable link using the frontend base URL
-    const userLink = `https://tap-mize.vercel.app/profile/${userId}`;
+    
+    const userLink = `${window.location.origin}/profile/${userId}`
     navigator.clipboard.writeText(userLink)
       .then(() => {
         alert("User link copied to clipboard!");
