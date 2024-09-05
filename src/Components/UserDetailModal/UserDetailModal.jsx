@@ -58,7 +58,7 @@ const UserDetailModal = ({ isOpen, onClose, user }) => {
           <div>
             <strong>Profile Image:</strong>
             <img
-              src={`http://localhost:8080/${user.profileimg}`}
+              src={`https://tapmize.onrender.com/${user.profileimg}`}
               alt="Profile"
               style={{ width: "100px", height: "100px" }}
             />
