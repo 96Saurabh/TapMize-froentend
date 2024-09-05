@@ -53,7 +53,7 @@ const Profile = () => {
     <div className="profile">
       <div className="profile__header">
         <div className="profile__left">
-          <img src={`tapmize.onrender.com/${userProfile.profileimg}`} alt="Profile" className="profile__image" />
+          <img src={`https://tapmize.onrender.com/${userProfile.profileimg}`} alt="Profile" className="profile__image" />
         </div>
         <div className="profile__right">
           <h2 className="profile__header-title">{userProfile.first} {userProfile.last}</h2>
