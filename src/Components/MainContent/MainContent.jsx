@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../Modal/Modal";
 import UserDetailModal from "../UserDetailModal/UserDetailModal";
-import { Link } from "react-router-dom";
 
 const MainContent = () => {
   const [users, setUsers] = useState([]);
@@ -25,10 +24,10 @@ const MainContent = () => {
 
   const fetchUserById = async (id) => {
     try {
-      // Use the correct backend URL to fetch the user details by ID
+      // Correct backend URL to fetch the user details by ID
       const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const data = await response.json();
-      setSelectedUser(data.data); // Corrected the property access based on the assumed API response
+      setSelectedUser(data.data); 
       setUserDetailModalOpen(true);
     } catch (error) {
       console.error("Error fetching user:", error);
@@ -58,7 +57,6 @@ const MainContent = () => {
 
   return (
     <div className="main">
-      {/* ... other content ... */}
       <div className="report-container">
         <div className="report-header">
           <h1 className="recent-articles">All Users list</h1>
