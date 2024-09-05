@@ -35,7 +35,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get(`tapmize.onrender.com/api/v1/profile/${userId}`);
+        const response = await axios.get(`https://tapmize.onrender.com/api/v1/profile/${userId}`);
         setUserProfile(response.data);
       } catch (error) {
         console.error("Error fetching user profile:", error);

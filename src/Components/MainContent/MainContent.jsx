@@ -25,6 +25,7 @@ const MainContent = () => {
   const fetchUserById = async (id) => {
     try {
       // Correct backend URL to fetch the user details by ID
+      // const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const data = await response.json();
       setSelectedUser(data.data); 
@@ -45,8 +46,8 @@ const MainContent = () => {
 
   const copyUserLinkToClipboard = (userId) => {
     
-    const userLink = `https://tap-mize.vercel.app/profile/${userId}`
-    // const userLink = `${window.location.origin}/profile/${userId}`
+    // const userLink = `https://tap-mize.vercel.app/profile/${userId}`
+    const userLink = `${window.location.origin}/profile/${userId}`
     navigator.clipboard.writeText(userLink)
       .then(() => {
         alert("User link copied to clipboard!");
