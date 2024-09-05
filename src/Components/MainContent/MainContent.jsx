@@ -28,7 +28,7 @@ const MainContent = () => {
       // Use the correct backend URL to fetch the user details by ID
       const response = await fetch(`https://tapmize.onrender.com/api/v1/profile/${id}`);
       const data = await response.json();
-      setSelectedUser(data);
+      setSelectedUser(data.data); // Corrected the property access based on the assumed API response
       setUserDetailModalOpen(true);
     } catch (error) {
       console.error("Error fetching user:", error);
