@@ -1,58 +1,59 @@
 .profile {
-
   width: 100%;
   height: 100vh;
   background-color: #222;
   border-radius: 15px;
   color: #fff;
+  overflow: hidden; /* Ensure no content goes out of bounds */
 }
+
 .profile__header {
   border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: url(./SplashScreen.png);
- 
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  width: 100%;
+  height: auto;
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding does not exceed the width */
 }
+
 .profile__left {
   margin: 10px;
   border-radius: 50%;
-  /* background-color: #333; */
-  
 }
-.profile__right{
+
+.profile__right {
   width: 70%;
   margin-top: 2rem;
 }
-.profile__image{
+
+.profile__image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
 }
 
-.profile__header-img {
-  background-color: #333;
-}
-
-.profile__icons{
+.profile__icons {
   font-size: 60px;
 }
 
 .profile__header-title {
   font-size: 24px;
   font-weight: bold;
-  /* margin-bottom: 5px; */
 }
 
 .profile__header-subtitle {
   font-size: 16px;
-  /* margin-bottom: 10px; */
 }
 
 .profile__header-text {
   font-size: 14px;
   text-align: left;
-  /* line-height: 1.5; */
   margin-bottom: 20px;
 }
 
@@ -70,7 +71,6 @@
   justify-content: center;
   height: 80px;
   width: 80px;
-  /* background-color: #333; */
   border-radius: 50%;
   text-decoration: none;
   color: #fff;
@@ -88,4 +88,25 @@
 
 .profile__link span {
   font-size: 12px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .profile__header {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .profile__right {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .profile__links {
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns for mobile */
+  }
+
+  .profile__icons {
+    font-size: 40px; /* Smaller icons on mobile */
+  }
 }
