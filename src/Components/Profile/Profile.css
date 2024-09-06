@@ -52,7 +52,7 @@
 .profile__header-text {
   font-size: 14px;
   text-align: left;
-  line-height: 1.5;
+  /* line-height: 1.5; */
   margin-bottom: 20px;
 }
 
